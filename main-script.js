@@ -1,5 +1,3 @@
-'use strict';
-
 
 //Global game variables{
 angleMode = "radians";
