@@ -2,6 +2,7 @@
 
 
 //Global game variables{
+angleMode = "radians";
 
 var Name = ""; //player's name
 var Splash = []; // rock particles
@@ -915,8 +916,8 @@ var Player = {
     draw : function(Cam) {
         
         
-    var walkSin = sin(this.walkCount);
-    var walkCos = cos(this.walkCount);
+    var walkSin = sin(radians(this.walkCount));
+    var walkCos = cos(radians(this.walkCount));
 
 pushMatrix();
         
@@ -1129,8 +1130,8 @@ var AIs = (function(){
     AIs.prototype.display = function(Cam) {
         
         
-    var walkSin = sin(this.walkCount);
-    var walkCos = cos(this.walkCount);
+    var walkSin = sin(radians(this.walkCount));
+    var walkCos = cos(radians(this.walkCount));
 
 pushMatrix();
     
@@ -1310,7 +1311,7 @@ imageMode(CENTER);
     pushMatrix();
     
     translate(this.x, this.y);
-    rotate(this.r);
+    rotate(radians(this.r));
     
 image(fallRock, 0, 0, this.w, this.h);
 
@@ -1353,7 +1354,7 @@ rect(this.x, this.y, 3, 3);
     this.col -= 2+this.speed;    
     this.y -= 1.5;
     this.x += this.speed;
-    this.x += 0.5*sin(this.y*2);   
+    this.x += 0.5*sin(radians(this.y*2));   
     };
     spark.prototype.die = function() {
         return this.col <= 0;
