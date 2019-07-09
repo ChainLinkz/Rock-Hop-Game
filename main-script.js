@@ -1,6 +1,6 @@
 
 setup = function() {
-size(600, 400);
+createCanvas(600, 400);
 };
 
 //Global game variables{
