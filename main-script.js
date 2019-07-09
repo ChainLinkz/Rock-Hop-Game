@@ -1,4 +1,8 @@
 
+setup = function() {
+createCanvas(600, 400);
+};
+
 //Global game variables{
 angleMode = "radians";
 
