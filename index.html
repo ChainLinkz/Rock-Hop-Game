@@ -18,10 +18,11 @@
 	 
 	 var sketchProc = function(processingInstance) {
      with (processingInstance) {
-        size(600, 400); 
+        size(1000, 650); 
         frameRate(60);
 
-
+scale(width/600, height/400);
+	     
 //Global game variables{
 angleMode = "radians";
 
@@ -1518,7 +1519,6 @@ if (frameCount > 555) {
         textAlign(CENTER, CENTER);
         textFont(createFont("impact"), 100);
         //text("Rock Hop", width/2, 50);
-        
         letters.P(464, 51);
         letters.O(412, 51);
         letters.H(359, 51);
@@ -1613,7 +1613,7 @@ if (frameCount > 555) {
         
        
     imageMode(CORNER);
-    image(lava, 0, 378-cam.y, width+5, height); 
+    image(lava, 0, height-22-cam.y, width+5, height); 
 
     }
     
@@ -1703,7 +1703,7 @@ if (cam.y > 100) {
 imageMode(CORNER);
 image(Texture, 0, 0, width, height);
 
-image(lava, 0, 348-cam.y, width+5, height);
+image(lava, 0, height-52-cam.y, width+5, height);
 
 image(startRock, cam.x, 220-cam.y);
 
@@ -1954,7 +1954,7 @@ if (cirColDown(fallr, rocki, constrain(fallr.x, rocki.x, rocki.x + rocki.w))) {
 fill(255, 213, 0, 255-dist(Player.x, 200, cam.x+highScores[i].score*2, 200));
     pushMatrix();
         translate(cam.x+highScores[i].score*2+10, 200);
-          rotate(90);
+          rotate(radians(90));
     text(highScores[i].name, 4, 0);
     popMatrix();        
             rect(cam.x+highScores[i].score*2, 0, 2, height);
@@ -1979,7 +1979,7 @@ text("Distance To Highest Score:\n"+round((highScores[0].score*2 - (abs(cam.x) +
 
  /************ Lava Texture ***********/
     imageMode(CORNER);
-    image(lava, 0, 378-cam.y, width+5, height);
+    image(lava, 0, height-22-cam.y, width+5, height);
 
 }
 
