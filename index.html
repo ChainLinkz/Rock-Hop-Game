@@ -1,7 +1,7 @@
 <!DOCTYPE html>
  2 <html> 
  <head>
-    <title>Processing.JS inside Webpages: Template</title> 
+    <title>Rock Hop [Game]</title> 
 </head>
  <body>
     <p align="center"> 
@@ -18,7 +18,7 @@
 	 
 	 var sketchProc = function(processingInstance) {
      with (processingInstance) {
-        size(1000, 650); 
+        size(600, 400); 
         frameRate(60);
 
 	     
@@ -1505,8 +1505,7 @@ if (frameCount > 555) {
          stroke(66, 51, 28);
          
         rect(0, 222, width, 180);
-            pushMatrix();
-	    scale(width/600, height/400);
+         
 	    
         //wall
         image(startRock, 0, 43);
@@ -1530,7 +1529,7 @@ if (frameCount > 555) {
         letters.C(240, 51);
         letters.O(188, 51);
         letters.R(138, 51);
-        popMatrix();
+
 	    
         if (keyCode !== 33) {
         
